@@ -1,0 +1,57 @@
+{
+    "stateFile": "/Users/david/Desktop/install/statefile.json",
+
+    "platforms": {
+        "windows": {
+            "directory": "/Users/david/Desktop/install/windows/",
+            "architectures": ["x86_64"]
+        },
+        "macos": {
+            "directory": "/Users/david/Desktop/install/macos/",
+            "architectures": ["x86_64", "aarch64"]
+        },
+        "images": {
+            "directory": "/Users/david/Desktop/install/images/",
+            "architectures": ["x86_64", "aarch64"]
+        }
+    },
+
+    "artefacts": {
+        "windows": [
+            {
+                "name": "Monitorian",
+                "architecture": "x86_64",
+                "src": {
+                    "from": "github",
+                    "owner": "emoacht",
+                    "repository": "Monitorian",
+                    "regex": "(\\d+\\.\\d+\\.\\d+)-Installer/MonitorianInstaller(\\d+).zip",
+                    "tag": "latest"
+                }
+            },
+            {
+                "name": "WinSCP",
+                "architecture": "x86_64",
+                "src": {
+                    "from": "sourceforge",
+                    "project": "winscp",
+                    "folder": "WinSCP",
+                    "version": "latest",
+                    "filename_regex": "WinSCP-{version}-Setup.exe",
+                    "version_finder": {
+                        "regex": "(\\d+\\.\\d+\\.\\d+)",
+                        "selector": "#files > div.files-toolbar.btn-bar.column.small-12 > div > a.button.green.big-text.download.with-sub-label.extra-wide > span.sub-label"
+                    }
+                }
+            }
+        ],
+    
+        "macos": [
+    
+        ],
+    
+        "images": [
+    
+        ]
+    }
+}

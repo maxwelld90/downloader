@@ -1,0 +1,50 @@
+{
+    "name": "Notepad++",
+    "architecture": "x86_64",
+    "skippable": false,
+    "src": {
+        "from": "github",
+        "owner": "notepad-plus-plus",
+        "repository": "notepad-plus-plus",
+        "regex": "npp\\.(\\d+\\.\\d+\\.\\d+)\\.Installer\\.x64\\.exe$",
+        "tag": "latest"
+    }
+},
+{
+    "name": "WinSCP Webpage",
+    "architecture": "x86_64",
+    "skippable": false,
+    "src": {
+        "from": "webpage",
+        "url": "https://winscp.net/eng/download.php",
+        "selector": ".btn.btn-primary.btn-lg",
+        "attribute": "href",
+        "version_regex": "/download/WinSCP-(\\d+\\.\\d+\\.\\d+)-"
+    }
+},
+{
+    "name": "WinSCP",
+    "architecture": "x86_64",
+    "skippable": false,
+    "src": {
+        "from": "sourceforge",
+        "project": "winscp",
+        "folder": "WinSCP",
+        "version": "latest",
+        "filename_regex": "WinSCP-{version}-Setup.exe",
+        "version_finder": {
+            "regex": "(\\d+\\.\\d+\\.\\d+)",
+            "selector": "#files > div.files-toolbar.btn-bar.column.small-12 > div > a.button.green.big-text.download.with-sub-label.extra-wide > span.sub-label"
+        }
+    }
+},
+{
+    "name": "Microspell",
+    "architecture": "x86_64",
+    "skippable": false,
+    "src": {
+        "from": "direct",
+        "url": "https://www.microspell.com/msdl1/ms-inst.EXE",
+        "version": "9.1"
+    }
+}

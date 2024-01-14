@@ -1,0 +1,9 @@
+- Complete archive extraction routines
+    - Count number of files in archive root - greater than 1, create directory, else place in temp
+- If archive, point downloaded path to extracted file, delete archive
+
+- Create configurations for each installer required
+
+- Tidy up output
+- Handle errors gracefully (delete temp directories)
+- Windows ISO downloader (https://github.com/ElliotKillick/Mido)
